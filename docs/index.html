@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>我的心得筆記</title>
+  <meta name="description" content="記錄 YouTube、讀書心得和靈光一現的小 App">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="心得">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="app.css">
+  <script src="vendor/js-yaml.min.js"></script>
+  <script src="vendor/marked.umd.js"></script>
+  <script src="vendor/purify.min.js"></script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/new">✏️ 我的心得筆記</a>
+    <span class="sync" id="sync" aria-live="polite"></span>
+    <a class="gear" href="#/settings" aria-label="設定">⚙️</a>
+  </header>
+
+  <main id="view" class="view"></main>
+
+  <nav class="tabbar" aria-label="主選單">
+    <a href="#/new" data-nav="new"><span>✏️</span>輸入</a>
+    <a href="#/browse" data-nav="browse"><span>📋</span>瀏覽</a>
+    <a href="#/search" data-nav="search"><span>🔍</span>搜尋</a>
+    <a href="#/tags" data-nav="tags"><span>🏷</span>標籤</a>
+  </nav>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
